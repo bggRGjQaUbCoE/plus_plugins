@@ -59,6 +59,7 @@ internal class Share(
         val shareIntent = Intent().apply {
             action = Intent.ACTION_SEND
             type = "text/plain"
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK
             putExtra(Intent.EXTRA_TEXT, text)
             if (subject != null) {
                 putExtra(Intent.EXTRA_SUBJECT, subject)
